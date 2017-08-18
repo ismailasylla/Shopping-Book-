@@ -1,3 +1,27 @@
-<p>
-  phone-list works!
-</p>
+
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" >New Phone</button>
+    </div>
+</div>
+<hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="#" class="list-group-item clearfix"
+             *ngFor="let phone of phones">
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">{{phone.name}}</h4>
+                    <p class="list-group-item-text">{{phone.description}}</p>
+                    <b class="list-group-item-text">{{phone.price}}</b>
+                </div>
+                <span class="pull-right">
+                    <img 
+                    [src]="phone.imagePath" 
+                    alt="{{phone.name}}" class="responssive" style="max-height: 50px;">
+
+                </span>
+            </a>
+            <app-phone-accessories></app-phone-accessories>
+        </div>
+    </div>
+
