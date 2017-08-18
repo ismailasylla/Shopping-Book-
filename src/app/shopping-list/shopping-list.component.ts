@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { accesory} from '../shared/accesory.model';
 
 @Component({
   selector: 'app-shopping-list',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
+  accesory: accesory[] = [
+     new accesory('HearPods', 1),
+     new accesory('case', 1),
+
+
+  ];
+
 
   constructor() { }
 
